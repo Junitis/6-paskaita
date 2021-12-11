@@ -1,106 +1,61 @@
-    body {
-        background-color: rgb(15, 143, 143);
-        padding: 20px;
-    }
-    .Mygtukas {
-        text-align: center;
-        padding-top: 15px;
-        width: 100px;
-        height: 75px;
-        background: #109c9e;
-        margin-top: 10px;
-        border-radius: 20px;
-        transition: 2s all;
-        transition-duration: 3;
-        transition-property: inherit;
-        transition-timing-function: cubic-bezier(10.800, 0.5, 0.800, 1);
-        transition-delay: 0.1s;
-        font-size: 15px;
-        font-family: Georgia;
-    }
-    .Mygtukas:hover {
-        width: 700px;
-        height: 150px;
-        background: rgb(41, 182, 104);
-        /* border: 10px solid rgb(7, 104, 214); */
-        /* transform: scale(1.2); */
-        transform: translate(30px);
-        font-size: 30px;
-        font-weight: bold;
-    }
-    .Mygtukas2 {
-        background: darkblue;
-        /* margin-top: 50px; */
-        width: 100px;
-        height: 40px;
-        border-radius: 20px;
-        margin-left: 50px;
-        opacity: 30%;
-    }
-    .Mygtukas2:hover {
-        opacity: 100%;
-        width: 700px;
-        height: 400px;
-        border-radius: 20px;
-        transition: all;
-        transition-duration: 2s;
-        transition-timing-function: ease-in-out;
-              
-      }
-      /* span:hover + .Mygtukas2 {
-        display: block;
-      } */
-    
-      .Mygtukas:hover .Mygtukas2:nth-of-type(2) {
-          transition-delay: 0.5s;
+body {
+    background: indigo;
+}
 
-    }
 
-    /* .elementas {
-        width: 20px;
-        height: 20px;
-        border-radius: 100px;
-        background: paleturquoise;
-        margin: 50px;
+.animacija {
+    margin: 50px;
+    width: 200px;
+    height: 200px;
+    background: ivory;
+    position: relative;
+    animation: infinite changeBg 4s alternate ease-in-out;
+    /* animation-name: changeBg;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+@keyframes changeBg {
+    /* from {background:indigo}
+    to {background:rgb(163, 163, 34)} */
+
+
+    25% {
+        background-color: ivory;
+        border-radius: 0%;
+        border-style: solid;
+        border-width: 5px;
+        transform: rotate(-180deg);
+        top: 0px; left: 0px;
     }
-    
-    .kelias {
-        width: 200px;
-        border-radius: 10px;
-        background: yellowgreen;
-        margin-bottom: 10px;
-        transition: 0.5s;
+    55% {background-color: rgb(175, 175, 38);
+        border-radius: 70%;
+        border-style: solid;
+        border-width: 25px;
+        transform: rotate(180deg);
+        top: 0px; left: 200px;
     }
-    
-    .kelias:hover {
-        background: peru;
+    75% {background-color: rgb(45, 184, 114);
+        border-radius: 15%;
+        border-style: solid;
+        transform: rotate(-180deg);
+        border-width: 50px;
+        top:200 px; left: 200px;
     }
-    
-    .road:hover .elementas1 {
-        margin-left: 300px;
-        transition-delay: 00.3s;
-        transition: 1s ease;
+    85% {background-color: rgb(203, 28, 209);
+        border-radius: 70%;
+        border-style: solid;
+        border-width: 10px;
+        transform: rotate(180deg);
+        top:200px; left: 0px;
     }
-    
-    .kelias:hover .delay {
-        transition-delay: 1s;
+    100% {background-color: rgb(32, 41, 129);
+        border-radius: 0%;
+        border-style: solid;
+        border-width: 150px;
+        transform: rotate(-180deg);
+        top:200px; left: 500px;
+        scale: 1.2;
     }
-    
-    .kelias:hover .elementas:nth-of-type(2) {
-        transition-delay: 0.2s; 
-    }
-    .kelias:hover .elementas:nth-of-type(3) {
-        transition-delay: 0.4s; 
-    }
-    .kelias:hover .elementas:nth-of-type(4) {
-        transition-delay: 0.6s; 
-    }
-    .kelias:hover .elementas:nth-of-type(5) {
-        transition-delay: 0.8s; 
-    }
-    .kelias:hover .elementas:nth-of-type(odd) {
-        background: green; 
-    }
-    .kelias:hover .elementas:nth-of-type(even) {
-        background: indianred;
-     */
+}
